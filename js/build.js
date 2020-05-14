@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const container = {
         template: `
-        <div style="max-width:1140px; overflow:hidden; margin:0 auto; width: 98%">
+        <div style="max-width:1140px; overflow:hidden; margin:0 auto; width: 95%">
              <slot></slot>
         </div>`
     }
@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', function(){
         props: {
             width: String,
             height: String,
-            placeholder: String
+            placeholder: String,
+            classes: String
         },
         template: `
-        <input required aria-required="true" type="text" :style="[def, {width: width + 'px', height: height + 'px'}]" :placeholder="placeholder"></input>
+        <input required aria-required="true" :class="classes" type="text" :style="[def, {width: width + 'px', height: height + 'px'}]" :placeholder="placeholder"></input>
         `
     }
 
@@ -82,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Компании', link: '#'},
                     {text: 'Наша Команда', link: '#'},
                     {text: 'Наши услуги', link: '#'},
-                    {text: 'Обратная связь', link: '#'}                   
+                    {text: 'Обратная связь', link: '#'}               
                 ]
             }        
         },
         template: `
         <nav class="navigation-block navigation-block_pos">
-            <div class="navigation-block__content" style="height: 90%; width:100%; overflow-y: auto; display:flex; align-items: center; justify-content: center">
+            <div class="navigation-block__content" style="height: 95%; width:100%; overflow-y: auto; display:flex; align-items: center; justify-content: center">
                 <div class="navigation-block__content-wrapper" style="display:flex; flex-direction: column; align-items: center">
                     <p :style="styles" class="navigation-block__elem" v-for="elem in menuElems">
                         <a :href="elem.link" style="text-decoration:none; color:white" class="navigation-block__link">{{elem.text}}</a>

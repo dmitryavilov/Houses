@@ -126,10 +126,68 @@
     transition: 0.4s;
   }
 }
+
+.navigation-block {
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(#000000, 0.9);
+  display: flex;
+  z-index: 2;
+  @include flex-center;
+  border-right: 6px solid #19b5fe;
+  transition: 0.4s;
+
+  &_toggle {
+    transform: translate(-1000px, -50%) !important;
+    transition: 0.4s;
+  }
+
+  &_pos {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__link {
+    height: 23px;
+    transition: 0.4s;
+    width: auto;
+    line-height: 1.3;
+
+    &:hover {
+      transition: 0.4s;
+
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:focus:after {
+      width: 100%;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background-color: #19b5fe;
+      width: 0px;
+      height: 6px;
+      position: absolute;
+      transition: width .3s ease-in-out;
+      right: 0;
+    }
+  }
+}
 //COMPONENTS-CLASSES
 
 * {
   box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 //ALLPAGE
 
@@ -146,9 +204,11 @@
 //ANIMATIONS
 
 .main-and-header {
-  width: 1920px;
+  width: 100%;
   height: 700px;
   background-image: url('../img/headerAndMain/bg.jpg');
+  @include image(1920px 700px, center center );
+  z-index: -1;
 }
 //MAIN-AND-HEADER
 
@@ -204,7 +264,6 @@
 
       &:hover {
         color: lemonchiffon;
-        border-bottom: 2px solid lemonchiffon;
         transition: 0.1s;
       }
     }
@@ -259,60 +318,12 @@
     margin-top: 5px;
   }
 }
-
-.navigation-block {
-  width: 250px;
-  height: 100%;
-  background-color: rgba(#000000, 0.8);
-  display: flex;
-  max-height: 1080px;
-  @include flex-center;
-  border-left: 6px solid #19b5fe;
-  transition: 0.4s;
-
-  &_toggle {
-    transform: translate(1000px, -50%) !important;
-    transition: 0.4s;
-  }
-
-  &_pos {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__link {
-    height: 23px;
-    transition: 0.4s;
-    width: auto;
-    line-height: 1.3;
-
-    &:hover {
-      transition: 0.4s;
-
-      &:after {
-        width: 100%;
-      }
-    }
-
-    &:focus:after {
-      width: 100%;
-    }
-
-    &::after {
-      display: block;
-      content: "";
-      background-color: #19b5fe;
-      width: 0px;
-      height: 6px;
-      position: absolute;
-      transition: width .3s ease-in-out;
-      left: 0;
-    }
-  }
-}
 //HEADER
+
+.main-information {
+  position: relative;
+  z-index: 1;
+}
 
 .main-title-block {
   width: 100%;

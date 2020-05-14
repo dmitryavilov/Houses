@@ -27,15 +27,16 @@
                         </a>
                         <!-- /.logo-block -->
                         <div class="phone-and-menu-block">
-                            <div class="phone-and-menu-block__phone-wrapper">
-                                <p class="phone-and-menu-block__text">Есть вопросы? Звоните!</p>
-                                <p class="phone-and-menu-block__phone">
-                                    <a href="tel:+78002590936" class="phone-and-menu-block__phone-link">
-                                        8 /800/ 259 09 36
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="phone-and-menu-block__menu-btn-wrapper" @click="menuToggle()">
+                            <a href="tel:+78002590936" style="text-decoration: none;">
+                                <div class="phone-and-menu-block__phone-wrapper">
+                                
+                                    <p class="phone-and-menu-block__text">Есть вопросы? Звоните!</p>
+                                    <p class="phone-and-menu-block__phone phone-and-menu-block__phone-link">                                       
+                                        8 /800/ 259 09 36                                       
+                                    </p>                                    
+                                </div>
+                            </a>
+                            <div ref="menuBtn" class="phone-and-menu-block__menu-btn-wrapper" @click="menuToggle()">
                                 <div class="phone-and-menu-block__elems-wrapper">
                                     <div class="phone-and-menu-block__elem"></div>
                                     <div class="phone-and-menu-block__elem"></div>
@@ -62,12 +63,12 @@
                         <!-- /.main-description-block -->
                         <form class="main-feedback-block main-feedback-block_center main-feedback-block_top">
                             <div class="main-feedback-block__inputs-wrapper">
-                                <text-field width="290" height="51" placeholder="Ваше имя"></text-field>
-                                <text-field width="290" height="51" placeholder="E-mail"></text-field>
-                                <text-field width="290" height="51" placeholder="Номер телефона"></text-field>
+                                <text-field width="290" height="51" placeholder="Ваше имя" classes="main-feedback-block__input"></text-field>
+                                <text-field width="290" height="51" placeholder="E-mail" classes="main-feedback-block__input"></text-field>
+                                <text-field width="290" height="51" placeholder="Номер телефона" classes="main-feedback-block__input"></text-field>
                             </div>
                             <div class="btn-block btn-block_header">
-                                <btn width="232" height="61" btn-text="Оcтавить заявку!" classes="button_effect" text-size="16" bgc="#19b5fe"></btn>
+                                <btn width="232" height="61" btn-text="Оcтавить заявку!" classes="button_effect main-feedback-block_btn" text-size="16" bgc="#19b5fe"></btn>
                             </div>
                         </form>
                         <!-- /.main-feedback-block -->
