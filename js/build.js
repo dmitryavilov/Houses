@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function(){
               menuBtn = document.querySelector('.phone-and-menu-block__menu-btn-wrapper');
         //HEADER
     //VARS
-
     const container = {
         template: `
         <div style="max-width:1140px; overflow:hidden; margin:0 auto; width: 95%">
@@ -75,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     textAlign: 'center'
                 },
                 menuElems: [
-                    {text: 'Наши услуги', link: '#'},
+                    {text: 'Наши услуги', link: '#block-1'},
                     {text: 'Рассчитать стоимость', link: '#'},
                     {text: 'Портфолио', link: '#'},
                     {text: 'Почему мы', link: '#'},
@@ -87,12 +86,20 @@ document.addEventListener('DOMContentLoaded', function(){
                 ]
             }        
         },
+        methods: {
+            menuToggle(){
+                document.querySelector('.navigation-block').classList.toggle('navigation-block_toggle');
+                document.querySelectorAll('.phone-and-menu-block__elem')[0].classList.toggle('phone-and-menu-block_elem_1_active');
+                document.querySelectorAll('.phone-and-menu-block__elem')[1].classList.toggle('phone-and-menu-block_elem_2_active');
+                document.querySelectorAll('.phone-and-menu-block__elem')[2].classList.toggle('phone-and-menu-block_elem_3_active');
+            }
+        },
         template: `
         <nav class="navigation-block navigation-block_pos">
             <div class="navigation-block__content" style="height: 95%; width:100%; overflow-y: auto; display:flex; align-items: center; justify-content: center">
                 <div class="navigation-block__content-wrapper" style="display:flex; flex-direction: column; align-items: center">
                     <p :style="styles" class="navigation-block__elem" v-for="elem in menuElems">
-                        <a :href="elem.link" style="text-decoration:none; color:white" class="navigation-block__link">{{elem.text}}</a>
+                        <a href="#" v-scroll-to=elem.link @click="menuToggle()" style="text-decoration:none; color:white" class="navigation-block__link">{{elem.text}}</a>
                     </p>
                 </div>
             </div>
@@ -182,8 +189,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     {
                         title: 'Дизайн экстерьера',
                         description: `
-                            Услуга, направленная на разработку дизайна прилегающих эле- 
-                            ментов зданий, а также дизайн самих зданий, позволяющая обе- 
+                            Услуга, направленная на разработку дизайна прилегающих элементов 
+                            зданий, а также дизайн самих зданий, позволяющая обе 
                             спечить удобство людей при нахождении на территории`,
                         imgLink: 'img/transfer/2.jpg'
                     },
@@ -210,11 +217,25 @@ document.addEventListener('DOMContentLoaded', function(){
                     
                     </slot>
                 </div>
-                <img :src="transfer.imgLink" :style="imgStyles" class="transfer-list-block__img"></img>
+               <img :src="transfer.imgLink" :style="imgStyles" class="transfer-list-block__img">
             </div>
         </div>`
     }
     //COMPONENTS
+
+    VueScrollTo.setDefaults({
+        container: "body",
+        duration: 500,
+        easing: "ease",
+        offset: 0,
+        force: true,
+        cancelable: true,
+        onStart: false,
+        onDone: false,
+        onCancel: false,
+        x: false,
+        y: true
+    })
 
     new Vue({
         el: '.wrapper',
