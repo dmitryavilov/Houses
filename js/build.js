@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 menuElems: [
                     {text: 'Наши услуги', link: '#block-1'},
                     {text: 'Рассчитать стоимость', link: '#block-2'},
-                    {text: 'Портфолио', link: '#'},
+                    {text: 'Портфолио', link: '#block-3'},
                     {text: 'Почему мы', link: '#'},
                     {text: 'Процесс взаимодействия', link: '#'},
                     {text: 'Компании', link: '#'},
@@ -228,6 +228,88 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const tabulation = {
+        data(){
+            return {
+                tabs: [
+                    {text: 'ВСЕ ПРОЕКТЫ', class:"tabulation-block_tab_active tabulation-block_tab_1"},
+                    {text: 'ЭКСТЕРЬЕРЫ', class:"tabulation-block_tab_2"},
+                    {text: 'ЖИЛЫЕ ИНТЕРЬЕРЫ', class: "tabulation-block_tab_3"},
+                    {text: 'ОБЩЕСТВЕННЫЕ ИНТЕРЬЕРЫ', class: "tabulation-block_tab_4"}
+                ],
+                allProjects: [
+                    {img: 'img/portfolio/1.jpg'},
+                    {img: 'img/portfolio/2.jpg'},
+                    {img: 'img/portfolio/3.jpg'},
+                    {img: 'img/portfolio/4.jpg'},
+                    {img: 'img/portfolio/5.jpg'},
+                    {img: 'img/portfolio/6.jpg'}
+                ],
+                exteriors: [
+                    {img: 'img/portfolio/1.jpg'},
+                    {img: 'img/portfolio/2.jpg'},
+                    {img: 'img/portfolio/3.jpg'},
+                    {img: 'img/portfolio/6.jpg'}
+                ],
+                liveInteriors: [
+                    {img: 'img/portfolio/1.jpg'},
+                    {img: 'img/portfolio/2.jpg'},
+                    {img: 'img/portfolio/4.jpg'},
+                    {img: 'img/portfolio/5.jpg'},
+                    {img: 'img/portfolio/6.jpg'}
+                ],
+                publicInteriors: [
+                    {img: 'img/portfolio/5.jpg'},
+                    {img: 'img/portfolio/4.jpg'},
+                    {img: 'img/portfolio/6.jpg'}
+                ],
+            }
+        },
+        methods: {
+            tabToggle(e){
+                const tabs = document.querySelectorAll('.tabulation-block__tab');
+                const projects = document.querySelectorAll('.tabulation-block__projects-wrapper');
+                for (i=0; i<tabs.length; i++){
+                    tabs[i].classList.remove('tabulation-block_tab_active');
+                    projects[i].classList.remove('tabulation-block_projects_active');
+                }
+                let t = event.target;
+                t.closest('.tabulation-block__tab').classList.add('tabulation-block_tab_active');
+                if(t.closest('.tabulation-block__tab').classList.contains('tabulation-block_tab_1')){
+                    projects[0].classList.add('tabulation-block_projects_active');
+                } else if(t.closest('.tabulation-block__tab').classList.contains('tabulation-block_tab_2')){
+                    projects[1].classList.add('tabulation-block_projects_active');
+                } else if(t.closest('.tabulation-block__tab').classList.contains('tabulation-block_tab_3')){
+                    projects[2].classList.add('tabulation-block_projects_active');
+                } else if(t.closest('.tabulation-block__tab').classList.contains('tabulation-block_tab_4')){
+                    projects[3].classList.add('tabulation-block_projects_active');
+                }
+            }
+        },
+        template: `
+        <div class="tabulation-block">
+            <div class="tabulation-block__tabs-wrapper">
+                <div :class="tab.class" class="tabulation-block__tab" @click="tabToggle($event)" v-for="tab in tabs">
+                    <h2 class="tabulation-block__tab-text">{{tab.text}}</h2>
+                </div>
+            </div>
+            <div class="tabulation-block__content-wrapper">
+                <div class="tabulation-block__projects-wrapper tabulation-block_projects_active animation fade-in">
+                    <img v-for="project in allProjects" class="tabulation-block__project" :src="project.img">
+                </div>
+                <div class="tabulation-block__projects-wrapper animation fade-in">
+                    <img v-for="project in exteriors" class="tabulation-block__project" :src="project.img">
+                </div>
+                <div class="tabulation-block__projects-wrapper animation fade-in">
+                    <img v-for="project in liveInteriors" class="tabulation-block__project" :src="project.img">
+                </div>
+                <div class="tabulation-block__projects-wrapper animation fade-in">
+                    <img v-for="project in publicInteriors" class="tabulation-block__project" :src="project.img">
+                </div>          
+            </div>
+        </div>`
+    }
     //COMPONENTS
 
     VueScrollTo.setDefaults({
@@ -258,7 +340,8 @@ document.addEventListener('DOMContentLoaded', function(){
             btn,
             menuNavigation,
             blockTitle,
-            transferList
+            transferList,
+            tabulation
         },
         filters: {
             format(value) {

@@ -62,6 +62,67 @@
       transition: width .3s ease-in-out;
       right: 0; }
 
+.tabulation-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .tabulation-block__tabs-wrapper {
+    height: 47px;
+    border: 1px solid #19b5fe;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 824px; }
+  .tabulation-block__tab {
+    position: relative;
+    width: 25%;
+    height: 39px;
+    border-right: 1px solid #19b5fe;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    cursor: pointer; }
+    .tabulation-block__tab-text {
+      font-family: Roboto;
+      font-size: 13px;
+      color: #19b5fe;
+      font-weight: 300; }
+    .tabulation-block__tab:last-child {
+      border: none; }
+  .tabulation-block_tab_active {
+    height: inherit;
+    transform: scaleY(1.1);
+    border-radius: 8px;
+    background-color: #19b5fe;
+    color: white;
+    border: none;
+    border: 1px solid #19b5fe;
+    transition: 0.2s; }
+  .tabulation-block_tab_active .tabulation-block__tab-text {
+    color: white; }
+  .tabulation-block_tab_active .tabulation-block__tab {
+    border: none; }
+  .tabulation-block__projects-wrapper {
+    width: 1140px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 23px; }
+  .tabulation-block__project {
+    display: flex;
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    transition: 0.4s; }
+    .tabulation-block__project:hover {
+      opacity: 0.3;
+      transition: 0.4s; }
+  .tabulation-block_projects_active {
+    display: flex; }
+
 * {
   box-sizing: border-box; }
 
@@ -488,3 +549,6 @@
     margin-top: 30px; }
     .calculator-block__result-price {
       font-weight: 300; }
+
+.portfolio {
+  padding-bottom: 30px; }

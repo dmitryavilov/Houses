@@ -95,6 +95,9 @@
 }
 //MIXINS
 
+$blue: #19b5fe;
+//VARS
+
 .button_effect {
   transition: 0.4s;
   position: relative;
@@ -177,6 +180,85 @@
       transition: width .3s ease-in-out;
       right: 0;
     }
+  }
+}
+
+.tabulation-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__tabs-wrapper {
+    height: 47px;
+    border: 1px solid $blue;
+    border-radius: 25px;
+    display: flex;
+    @include flex-spb-center;
+    width: 824px;
+  }
+
+  &__tab {
+    position: relative;
+    width: 25%;
+    height: 39px;
+    border-right: 1px solid $blue;
+    text-align: center;
+    display: flex;
+    @include flex-center;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &-text {
+      @include fw(Roboto, 13px, $blue, 300);
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &_tab_active {
+    height: inherit;
+    transform: scaleY(1.1);
+    border-radius: 8px;
+    background-color: $blue;
+    color: white;
+    border: none;
+    border: 1px solid $blue;
+    transition: 0.2s;
+  }
+
+  &_tab_active &__tab-text {
+    color: white;
+  }
+
+  &_tab_active &__tab {
+    border: none;
+  }
+
+  &__projects-wrapper {
+    width: 1140px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 23px;
+  }
+
+  &__project {
+    display: flex;
+    flex-basis: 31%;
+    margin-bottom: 30px;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.3;
+      transition: 0.4s;
+    }
+  }
+
+  &_projects_active {
+    display: flex;
   }
 }
 //COMPONENTS-CLASSES
@@ -700,8 +782,8 @@
   }
 
   &_button_active {
-    background-color: #19b5fe;
-    border-color: #19b5fe;
+    background-color: $blue;
+    border-color: $blue;
     transition: 0.2s;
   }
 
@@ -714,9 +796,12 @@
     }
   }
 }
-
-
 //CALCULATOR
+
+.portfolio {
+  padding-bottom: 30px;
+}
+//PORTFOLIO
 
 
 
