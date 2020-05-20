@@ -1,3 +1,19 @@
+@media (max-width: 1300px) {
+  .calculator-block__calculator {
+    width: 505px; }
+  .calculator-block__calculator-wrapper, .calculator-block__packets-list {
+    width: 554px; }
+  .calculator-block__button {
+    width: 153px; }
+  .calculator-block__button-modal {
+    width: 203px;
+    height: 153px;
+    background-size: 203px 153px; }
+  .calculator-block__button-modal-text {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 45px; } }
+
 @media (max-width: 1200px) {
   .transfer-list-block {
     display: flex;
@@ -51,6 +67,20 @@
     height: 280px !important; }
   .page-title-block__text {
     font-size: 30px !important; } }
+
+@media (max-width: 950px) {
+  .calculator-block__results-description {
+    font-size: 26px; }
+  .calculator-block__btn {
+    width: 250px !important; }
+  .calculator-block__calculator {
+    width: 455px; }
+  .calculator-block__calculator-wrapper, .calculator-block__packets-list {
+    width: 500px; }
+  .calculator-description-block__description {
+    font-size: 20px; }
+  .calculator-block__button {
+    width: 143px; } }
 
 @media (max-width: 820px) {
   .main-feedback-block__inputs-wrapper {
@@ -115,7 +145,54 @@
     .page-title-block__text {
       font-size: 27px !important; }
     .page-title-block__underline {
-      width: 287px !important; } }
+      width: 287px !important; }
+  .calculator {
+    height: 1022px;
+    background-size: 1920px 1022px; }
+  .calculator-block {
+    flex-direction: column; }
+    .calculator-block__main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .calculator-block__result {
+      display: none; }
+    .calculator-block__result-wrapper-sm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 45px;
+      position: fixed;
+      top: 80px;
+      left: 50%;
+      transform: translate(-50%, -200px);
+      height: 50px;
+      width: 290px;
+      box-shadow: 0 0 5px 0 black;
+      transition: 0.3s; }
+    .calculator-block__result-sm {
+      font-size: 17px;
+      font-family: Roboto;
+      color: #464646;
+      font-weight: 400;
+      width: 190px; }
+    .calculator-block_result-wrapper-sm_active {
+      transform: translate(-50%, 0px);
+      transition: 0.3s; }
+    .calculator-block__close-btn {
+      background-image: url("../img/calculator/close.svg");
+      background-size: 30px 30px;
+      width: 50px;
+      height: 40px;
+      border-left: 1px solid black;
+      background-position: right center;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+      z-index: 3;
+      cursor: pointer; }
+    .calculator-block__results-wrapper {
+      margin-top: 60px; } }
 
 @media (max-width: 700px) {
   .phone-and-menu-block__phone-link {
@@ -137,7 +214,11 @@
   .main-description-block__description {
     font-size: 13px; }
   .main-garanty-block__garanty {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .calculator-description-block__description {
+    font-size: 18px;
+    text-align: center;
+    line-height: 25px; } }
 
 @media (max-width: 600px) {
   .phone-and-menu-block__text {
@@ -167,6 +248,30 @@
   .main-description-block__description-small {
     vertical-align: super;
     font-size: 12px; } }
+
+@media (max-width: 550px) {
+  .calculator-block__calculator-wrapper, .calculator-block__packets-list {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .calculator-block__packets-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 280px; }
+  .calculator-block__buttons-wrapper {
+    flex-direction: column;
+    height: 180px; }
+  .calculator-block__button {
+    width: 203px; }
+  .calculator-block__calculator {
+    width: 365px; }
+  .calculator-block__results-wrapper {
+    margin-top: 30px; }
+  .calculator {
+    height: 1082px;
+    background-size: 1950px 1082px; } }
 
 @media (max-width: 500px) {
   .main-title-block__title {
@@ -208,4 +313,10 @@
   .transfer-list-block__description {
     height: 90px; }
   .transfer-list-block__main-wrapper {
-    height: 205px !important; } }
+    height: 205px !important; }
+  .calculator-block__calculator {
+    width: 285px; }
+  .calculator-block__checkbox-label {
+    font-size: 13px; }
+  .calculator-block__calculator-wrapper, .calculator-block__packets-list {
+    width: 310px; } }

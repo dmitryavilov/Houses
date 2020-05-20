@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', function(){
         //HEADER
     //VARS
     const container = {
+        props: {
+            styles: String
+        },
         template: `
-        <div style="max-width:1140px; overflow:hidden; margin:0 auto; width: 95%">
+        <div :style="" style="max-width:1140px; overflow:hidden; margin:0 auto; width: 95%">
              <slot></slot>
         </div>`
     }
@@ -45,7 +48,9 @@ document.addEventListener('DOMContentLoaded', function(){
                     border: 'none',
                     borderRadius: '30px',
                     fontFamily: 'Roboto',
-                    fontWeight: '400'
+                    fontWeight: '400',
+                    position: 'relative',
+                    zIndex: 0
                 }
             }
         },
@@ -75,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 },
                 menuElems: [
                     {text: 'Наши услуги', link: '#block-1'},
-                    {text: 'Рассчитать стоимость', link: '#'},
+                    {text: 'Рассчитать стоимость', link: '#block-2'},
                     {text: 'Портфолио', link: '#'},
                     {text: 'Почему мы', link: '#'},
                     {text: 'Процесс взаимодействия', link: '#'},
@@ -116,7 +121,9 @@ document.addEventListener('DOMContentLoaded', function(){
                     display: 'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    alignItems: 'center'
+                    alignItems: 'center',
+                    marginTop: '62px',
+                    marginBottom: '30px'
                 },
                 lineStyles: {
                     width: '377px',
@@ -130,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function(){
             lineColor: String
         },
         template: `
-        <div class="page-title-block" style="margin-top: 62px; margin-bottom: 30px" :style="blockStyles">
+        <div class="page-title-block" :style="blockStyles">
             <h2 class="page-title-block__text" :style="{color: textColor}" style="font-size: 36px; font-family: 'Roboto';font-weight: 400">{{text}}</h2>
             <div class="page-title-block__underline" :style="[lineStyles, {backgroundColor: lineColor}]"></div>
         </div>`
@@ -240,8 +247,10 @@ document.addEventListener('DOMContentLoaded', function(){
     new Vue({
         el: '.wrapper',
         data: {
-          menuBl: document.querySelector('.navigation-block'),
-          menuBtn: menuBtn
+            meter: 5,
+            defaultPrice: 4850,
+            objectPrice: 48500,
+            finalPrice: 64020
         },
         components: {
             container,
@@ -251,12 +260,42 @@ document.addEventListener('DOMContentLoaded', function(){
             blockTitle,
             transferList
         },
+        filters: {
+            format(value) {
+              return value.toString().replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+            },
+        },
         methods: {
             menuToggle(){
                 document.querySelector('.navigation-block').classList.toggle('navigation-block_toggle');
                 document.querySelectorAll('.phone-and-menu-block__elem')[0].classList.toggle('phone-and-menu-block_elem_1_active');
                 document.querySelectorAll('.phone-and-menu-block__elem')[1].classList.toggle('phone-and-menu-block_elem_2_active');
                 document.querySelectorAll('.phone-and-menu-block__elem')[2].classList.toggle('phone-and-menu-block_elem_3_active');
+            },
+            calcBtnActive(e){
+                const btns = document.querySelectorAll('.calculator-block__button');
+                for (i=0; i<btns.length; i++){
+                    btns[i].classList.remove('calculator-block_button_active');
+                }
+                t = event.target.closest('.calculator-block__button');
+                t.classList.add('calculator-block_button_active');
+                if(btns[0].classList.contains('calculator-block_button_active')){
+                    return this.finalPrice = ((+this.defaultPrice + +this.objectPrice) * 3) / 5
+                } else if(btns[1].classList.contains('calculator-block_button_active')){
+                    return this.finalPrice = ((+this.defaultPrice + +this.objectPrice) * 6) / 5
+                } else if(btns[2].classList.contains('calculator-block_button_active')){
+                    return this.finalPrice = ((+this.defaultPrice + +this.objectPrice) * 9) / 5
+                }    
+            },
+            resultToggleOn(){
+                if(document.querySelector('.calculator-block__result-wrapper-sm').classList.contains('calculator-block_result-wrapper-sm_active')){
+                    return;
+                } else {
+                    document.querySelector('.calculator-block__result-wrapper-sm').classList.add('calculator-block_result-wrapper-sm_active');
+                }                
+            },
+            resultToggleOff(){
+                document.querySelector('.calculator-block__result-wrapper-sm').classList.remove('calculator-block_result-wrapper-sm_active');
             }
         }
     });
