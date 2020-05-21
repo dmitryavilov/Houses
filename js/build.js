@@ -239,30 +239,30 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'ОБЩЕСТВЕННЫЕ ИНТЕРЬЕРЫ', class: "tabulation-block_tab_4"}
                 ],
                 allProjects: [
-                    {img: 'img/portfolio/1.jpg'},
-                    {img: 'img/portfolio/2.jpg'},
-                    {img: 'img/portfolio/3.jpg'},
-                    {img: 'img/portfolio/4.jpg'},
-                    {img: 'img/portfolio/5.jpg'},
-                    {img: 'img/portfolio/6.jpg'}
+                    {img: 'img/portfolio/1.webp'},
+                    {img: 'img/portfolio/2.webp'},
+                    {img: 'img/portfolio/3.webp'},
+                    {img: 'img/portfolio/4.webp'},
+                    {img: 'img/portfolio/5.webp'},
+                    {img: 'img/portfolio/6.webp'}
                 ],
                 exteriors: [
-                    {img: 'img/portfolio/1.jpg'},
-                    {img: 'img/portfolio/2.jpg'},
-                    {img: 'img/portfolio/3.jpg'},
-                    {img: 'img/portfolio/6.jpg'}
+                    {img: 'img/portfolio/1.webp'},
+                    {img: 'img/portfolio/2.webp'},
+                    {img: 'img/portfolio/3.webp'},
+                    {img: 'img/portfolio/6.webp'}
                 ],
                 liveInteriors: [
-                    {img: 'img/portfolio/1.jpg'},
-                    {img: 'img/portfolio/2.jpg'},
-                    {img: 'img/portfolio/4.jpg'},
-                    {img: 'img/portfolio/5.jpg'},
-                    {img: 'img/portfolio/6.jpg'}
+                    {img: 'img/portfolio/1.webp'},
+                    {img: 'img/portfolio/2.webp'},
+                    {img: 'img/portfolio/4.webp'},
+                    {img: 'img/portfolio/5.webp'},
+                    {img: 'img/portfolio/6.webp'}
                 ],
                 publicInteriors: [
-                    {img: 'img/portfolio/5.jpg'},
-                    {img: 'img/portfolio/4.jpg'},
-                    {img: 'img/portfolio/6.jpg'}
+                    {img: 'img/portfolio/5.webp'},
+                    {img: 'img/portfolio/4.webp'},
+                    {img: 'img/portfolio/6.webp'}
                 ],
             }
         },

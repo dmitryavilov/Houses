@@ -48,6 +48,16 @@
             width: 945px !important;
         }
     }
+
+    .tabulation-block__project {
+        width: 250px;
+        height: 230px;
+        flex-basis: 28%;
+    }
+
+    .tabulation-block__projects-wrapper {
+        width: 810px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -120,6 +130,14 @@
     .page-title-block__text {
         font-size: 30px !important;
     }
+
+    .tabulation-block__tabs-wrapper {
+        width: 625px;
+    }
+
+    .tabulation-block__tab-text {
+        line-height: 15px;
+    }
 }
 
 @media (max-width: 950px) {
@@ -145,6 +163,15 @@
 
     .calculator-block__button {
         width: 143px;
+    }
+
+    .tabulation-block__projects-wrapper {
+        width: 780px;
+    }
+
+    .tabulation-block__project {
+        width: 240px;
+        height: 210px;
     }
 }
 
@@ -323,6 +350,14 @@
             margin-top: 60px;
         }
     }
+
+    .tabulation-block__project {
+        flex-basis: 35%;
+    }
+
+    .tabulation-block__projects-wrapper {
+        width: 520px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -370,6 +405,24 @@
         font-size: 18px;
         text-align: center;
         line-height: 25px;
+    }
+
+    .tabulation-block__tabs-wrapper {
+        width: 420px;
+        height: 37px;
+    }
+
+    .tabulation-block__tab-text {
+        font-family: Roboto;
+        font-size: 9px;
+    }
+
+    .tabulation-block__tab {
+        height: 29px;
+    }
+
+    .tabulation-block_tab_active {
+        height: 43px;
     }
 }
 
@@ -450,6 +503,15 @@
         height: 1082px;
         background-size: 1950px 1082px;
     }
+
+    .tabulation-block__project {
+        flex-basis: 91%;
+    }
+
+    .tabulation-block__projects-wrapper {
+        width: 280px;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 500px) {
@@ -499,7 +561,13 @@
         }
     }
 
-    
+    .tabulation-block__tabs-wrapper {
+        width: 395px;
+    }
+
+    .tabulation-block__tab-text {
+        font-size: 8.5px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -538,5 +606,14 @@
 
     .calculator-block__calculator-wrapper, .calculator-block__packets-list {
         width: 310px;
+    }
+
+    .tabulation-block__tabs-wrapper {
+        width: 300px;
+    }
+
+    .tabulation-block__tab-text {
+        line-height: 12px;
+        font-size: 8px;
     }
 }

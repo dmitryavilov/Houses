@@ -218,8 +218,7 @@ $blue: #19b5fe;
   }
 
   &_tab_active {
-    height: inherit;
-    transform: scaleY(1.1);
+    height: 53px;
     border-radius: 8px;
     background-color: $blue;
     color: white;

@@ -93,8 +93,7 @@
     .tabulation-block__tab:last-child {
       border: none; }
   .tabulation-block_tab_active {
-    height: inherit;
-    transform: scaleY(1.1);
+    height: 53px;
     border-radius: 8px;
     background-color: #19b5fe;
     color: white;
