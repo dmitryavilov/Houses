@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Рассчитать стоимость', link: '#block-2'},
                     {text: 'Портфолио', link: '#block-3'},
                     {text: 'Почему мы', link: '#block-4'},
-                    {text: 'Процесс взаимодействия', link: '#'},
+                    {text: 'Процесс взаимодействия', link: '#block-5'},
                     {text: 'Компании', link: '#'},
                     {text: 'Наша Команда', link: '#'},
                     {text: 'Наши услуги', link: '#'},
@@ -341,10 +341,10 @@ document.addEventListener('DOMContentLoaded', function(){
         data(){
             return {
                 items:[
-                    {text:"Заполнение брифа", img: "img/process/1.jpg"},
-                    {text:"Исследование", img: "img/process/2.jpg"},
-                    {text:"Идея", img: "img/process/3.jpg"},
-                    {text:"Завершение", img: "img/process/4.jpg"},
+                    {text:"Заполнение брифа", img: "img/process/1.webp"},
+                    {text:"Исследование", img: "img/process/2.webp"},
+                    {text:"Идея", img: "img/process/3.webp"},
+                    {text:"Завершение", img: "img/process/4.webp"},
                 ]
             }
         },

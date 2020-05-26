@@ -297,7 +297,7 @@ $blue: #19b5fe;
   @include flex-ai-cent-col;
 
   &__item {
-    width: 100%;
+    width: 1140px;
     display: flex;
     justify-content: center;
     height: 260px;
@@ -866,12 +866,11 @@ $blue: #19b5fe;
 
 .advantages {
   background-color: #f5f9fa;
-  padding: 0 50px;
 }
 //ADVANTAGES
 
 .process {
-  padding: 0 50px;
+  padding-bottom: 50px;
 }
 
 
