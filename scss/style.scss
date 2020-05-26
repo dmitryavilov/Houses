@@ -261,6 +261,36 @@ $blue: #19b5fe;
     display: flex;
   }
 }
+
+.advantages-block {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+
+  &__advantage {
+    width: 329px;
+    flex-basis: 25%;
+    display: flex;
+    @include flex-ai-cent-col;
+    margin-bottom: 40px;
+  }
+
+  &__img-wrapper {
+    height: 78px;
+    width: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid $blue;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    @include f(Roboto, 14px, #3f3f3f, 400, 20px);
+    width: 258px;
+  }
+}
 //COMPONENTS-CLASSES
 
 * {
@@ -802,6 +832,12 @@ $blue: #19b5fe;
   padding-bottom: 30px;
 }
 //PORTFOLIO
+
+.advantages {
+  background-color: #f5f9fa;
+  padding: 0 50px;
+}
+//ADVANTAGES
 
 
 

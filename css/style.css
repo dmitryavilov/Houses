@@ -123,6 +123,34 @@
   .tabulation-block_projects_active {
     display: flex; }
 
+.advantages-block {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap; }
+  .advantages-block__advantage {
+    width: 329px;
+    flex-basis: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px; }
+  .advantages-block__img-wrapper {
+    height: 78px;
+    width: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid #19b5fe;
+    margin-bottom: 23px; }
+  .advantages-block__text {
+    font-family: Roboto;
+    font-size: 14px;
+    color: #3f3f3f;
+    line-height: 20px;
+    font-weight: 400;
+    width: 258px; }
+
 * {
   box-sizing: border-box; }
 
@@ -552,3 +580,7 @@
 
 .portfolio {
   padding-bottom: 30px; }
+
+.advantages {
+  background-color: #f5f9fa;
+  padding: 0 50px; }

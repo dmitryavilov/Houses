@@ -362,4 +362,6 @@
     width: 300px; }
   .tabulation-block__tab-text {
     line-height: 12px;
-    font-size: 8px; } }
+    font-size: 8px; }
+  .advantages-block__text {
+    width: 208px; } }

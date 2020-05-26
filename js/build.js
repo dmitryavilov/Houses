@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Наши услуги', link: '#block-1'},
                     {text: 'Рассчитать стоимость', link: '#block-2'},
                     {text: 'Портфолио', link: '#block-3'},
-                    {text: 'Почему мы', link: '#'},
+                    {text: 'Почему мы', link: '#block-4'},
                     {text: 'Процесс взаимодействия', link: '#'},
                     {text: 'Компании', link: '#'},
                     {text: 'Наша Команда', link: '#'},
@@ -310,6 +310,32 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const advantages = {
+        data(){
+            return {
+                advantages: [
+                    {img: "img/advantages/1.png", text: `Профессиональные дизайнеры и визуализаторы с зарубежной практикой работы`, width: "73px", height: "58px"},
+                    {img: "img/advantages/2.png", text: `Интеративный подход, работаем до полного согласования с Вами`, width: "75px", height: "65px"},
+                    {img: "img/advantages/3.png", text: `Решаем вопрос закупки, берем авторский надзор на себя (пакет Full)`, width: "60px", height: "57px"},
+                    {img: "img/advantages/4.png", text: `Над проектом работает группа специалистов под началом project менеджера в ERP системе`, width: "70px", height: "61px"},
+                    {img: "img/advantages/5.png", text: `Выполнение раньше установленных сроков`, width: "70px", height: "64px"},
+                    {img: "img/advantages/6.png", text: `Дарим альбом проекта, вместе с 25% скидкой на следующее обращение`, width: "74px", height: "64px"}
+                ]
+            }
+        },
+        template: `
+        <div class="advantages-block">
+            <div class="advantages-block__advantage" v-for="advantage in advantages">
+                <div class="advantages-block__img-wrapper">
+                    <img class="advantages-block__img" :style="{height: advantage.height, width: advantage.width}" :src="advantage.img">
+                </div>
+                <p class="advantages-block__text">
+                    {{advantage.text}}
+                </p>
+            </div>
+        </div>`
+    }
     //COMPONENTS
 
     VueScrollTo.setDefaults({
@@ -341,7 +367,8 @@ document.addEventListener('DOMContentLoaded', function(){
             menuNavigation,
             blockTitle,
             transferList,
-            tabulation
+            tabulation,
+            advantages
         },
         filters: {
             format(value) {
