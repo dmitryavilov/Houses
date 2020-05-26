@@ -336,6 +336,28 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const processList = {
+        data(){
+            return {
+                items:[
+                    {text:"Заполнение брифа", img: "img/process/1.jpg"},
+                    {text:"Исследование", img: "img/process/2.jpg"},
+                    {text:"Идея", img: "img/process/3.jpg"},
+                    {text:"Завершение", img: "img/process/4.jpg"},
+                ]
+            }
+        },
+        template: `
+        <div class="process-list-block">
+            <div class="process-list-block__item" v-for="item in items">
+                <img class="process-list-block__img" :src="item.img">
+                <div class="process-list-block__text-wrapper">
+                    <h2 class="process-list-block__text">{{item.text}}</h2>
+                </div>
+            </div>
+        </div>`
+    }
     //COMPONENTS
 
     VueScrollTo.setDefaults({
@@ -368,7 +390,8 @@ document.addEventListener('DOMContentLoaded', function(){
             blockTitle,
             transferList,
             tabulation,
-            advantages
+            advantages,
+            processList
         },
         filters: {
             format(value) {

@@ -151,6 +151,31 @@
     font-weight: 400;
     width: 258px; }
 
+.process-list-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .process-list-block__item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 260px; }
+    .process-list-block__item:nth-child(2n) {
+      flex-direction: row-reverse; }
+  .process-list-block__img, .process-list-block__text-wrapper {
+    width: 50%;
+    height: inherit; }
+  .process-list-block__text-wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; }
+  .process-list-block__text {
+    font-family: Roboto;
+    font-size: 30px;
+    color: #464646;
+    font-weight: 300; }
+
 * {
   box-sizing: border-box; }
 
@@ -583,4 +608,7 @@
 
 .advantages {
   background-color: #f5f9fa;
+  padding: 0 50px; }
+
+.process {
   padding: 0 50px; }
