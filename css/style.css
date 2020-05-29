@@ -178,20 +178,23 @@
 
 .team-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap; }
   .team-block__person {
     display: flex;
+    align-items: center;
     flex-basis: 33%;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    text-align: center; }
   .team-block__title {
     font-family: Roboto;
     font-size: 24px;
     color: #19b5fe;
     font-weight: 300;
-    margin-top: 17px; }
+    margin-top: 17px;
+    line-height: 30px; }
   .team-block__description {
     font-family: Roboto;
     font-size: 16px;

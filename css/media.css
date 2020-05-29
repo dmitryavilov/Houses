@@ -231,7 +231,9 @@
     height: 50%;
     width: 100%; }
   .process-list-block__text-wrapper {
-    background-color: #fcfcfc; } }
+    background-color: #fcfcfc; }
+  .team-block__person {
+    flex-basis: 50%; } }
 
 @media (max-width: 700px) {
   .phone-and-menu-block__phone-link {
@@ -296,7 +298,9 @@
       opacity: 1; } }
   .main-description-block__description-small {
     vertical-align: super;
-    font-size: 12px; } }
+    font-size: 12px; }
+  .team-block__person {
+    flex-basis: 100%; } }
 
 @media (max-width: 550px) {
   .calculator-block__calculator-wrapper, .calculator-block__packets-list {

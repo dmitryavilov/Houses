@@ -325,19 +325,22 @@ $blue: #19b5fe;
 
 .team-block {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
 
   &__person {
     display: flex;
+    align-items: center;
     flex-basis: 33%;
     @include flex-ai-cent-col;
     margin-bottom: 50px;
+    text-align: center;
   }
 
   &__title {
     @include fw(Roboto, 24px, $blue, 300);
     margin-top: 17px;
+    line-height: 30px;
   }
 
   &__description {
