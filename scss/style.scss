@@ -322,6 +322,29 @@ $blue: #19b5fe;
     @include fw(Roboto, 30px, #464646, 300);
   }
 }
+
+.team-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__person {
+    display: flex;
+    flex-basis: 33%;
+    @include flex-ai-cent-col;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @include fw(Roboto, 24px, $blue, 300);
+    margin-top: 17px;
+  }
+
+  &__description {
+    @include fw(Roboto, 16px, #464646, 300);
+    margin-top: 7px;
+  }
+}
 //COMPONENTS-CLASSES
 
 * {
@@ -872,8 +895,11 @@ $blue: #19b5fe;
 .process {
   padding-bottom: 50px;
 }
-
-
 //PROCESS
+
+.team {
+  padding-bottom: 50px;
+}
+//TEAM
 
 

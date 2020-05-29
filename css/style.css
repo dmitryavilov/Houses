@@ -176,6 +176,29 @@
     color: #464646;
     font-weight: 300; }
 
+.team-block {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .team-block__person {
+    display: flex;
+    flex-basis: 33%;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px; }
+  .team-block__title {
+    font-family: Roboto;
+    font-size: 24px;
+    color: #19b5fe;
+    font-weight: 300;
+    margin-top: 17px; }
+  .team-block__description {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #464646;
+    font-weight: 300;
+    margin-top: 7px; }
+
 * {
   box-sizing: border-box; }
 
@@ -610,4 +633,7 @@
   background-color: #f5f9fa; }
 
 .process {
+  padding-bottom: 50px; }
+
+.team {
   padding-bottom: 50px; }

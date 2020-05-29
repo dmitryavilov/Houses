@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+
         const menuBlock = document.querySelector('.navigation-block'),
               menuBtn = document.querySelector('.phone-and-menu-block__menu-btn-wrapper');
         //HEADER
@@ -358,7 +360,31 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const teamList = {
+        data(){
+            return {
+                team: [
+                    {img:"img/team/1.webp", name: "Ирина Притыкина", desc: "Директор компании"},
+                    {img:"img/team/2.webp", name: "Игорь Карий", desc: "Финансовый директор"},
+                    {img:"img/team/3.webp", name: "Илья Кондрашин", desc: "Инженер модельер"},
+                    {img:"img/team/4.webp", name: "Маргарита Гордеева", desc: "3D дизайнер"},
+                    {img:"img/team/5.webp", name: "Светлана Коток", desc: "Дизайнер интерьеров"},
+                    {img:"img/team/6.webp", name: "Максим Ковальский", desc: "Дизайнер ландшафтов"}
+                ]
+            }
+        },
+        template: `
+        <div class="team-block">
+            <div class="team-block__person" v-for="item in team">
+                <img :src="item.img" class="team-block__img">
+                <h2 class="team-block__title">{{item.name}}</h2>
+                <p class="team-block__description">{{item.desc}}</p>
+            </div>
+        </div>`
+    }
     //COMPONENTS
+    
 
     VueScrollTo.setDefaults({
         container: "body",
@@ -372,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function(){
         onCancel: false,
         x: false,
         y: true
-    })
+    });
 
     new Vue({
         el: '.wrapper',
@@ -391,7 +417,8 @@ document.addEventListener('DOMContentLoaded', function(){
             transferList,
             tabulation,
             advantages,
-            processList
+            processList,
+            teamList
         },
         filters: {
             format(value) {
@@ -433,3 +460,4 @@ document.addEventListener('DOMContentLoaded', function(){
         }
     });
 });
+
