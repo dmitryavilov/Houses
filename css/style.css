@@ -202,6 +202,31 @@
     font-weight: 300;
     margin-top: 7px; }
 
+.blog-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .blog-block__elem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-basis: 34%;
+    padding-bottom: 10px;
+    margin-bottom: 30px; }
+  .blog-block__link {
+    text-decoration: none;
+    max-width: 520px;
+    margin-top: 31px; }
+  .blog-block__text {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #19b5fe;
+    line-height: 24px;
+    font-weight: 300; }
+    .blog-block__text:hover {
+      border-bottom: 1px solid #19b5fe; }
+
 * {
   box-sizing: border-box; }
 
@@ -640,3 +665,56 @@
 
 .team {
   padding-bottom: 50px; }
+
+.credit-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative; }
+  .credit-block_top {
+    margin-top: 50px; }
+  .credit-block__title {
+    font-family: Roboto;
+    font-size: 30px;
+    color: #464646;
+    font-weight: 300; }
+  .credit-block__credit {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #464646;
+    line-height: 26px;
+    font-weight: 300;
+    max-width: 945px;
+    margin-top: 15px; }
+  .credit-block__name {
+    font-family: Roboto;
+    font-size: 18px;
+    color: #464646;
+    font-weight: 700;
+    margin-top: 15px; }
+  .credit-block__description {
+    font-family: Roboto;
+    font-size: 16px;
+    color: #464646;
+    font-weight: 300;
+    margin-top: 10px; }
+  .credit-block__quotes {
+    background-image: url("../img/team/quotes.png");
+    background-position: center center;
+    background-size: 47px 37px;
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 37px;
+    position: absolute; }
+    .credit-block__quotes:nth-of-type(1) {
+      left: 0;
+      top: 0; }
+    .credit-block__quotes:last-child {
+      right: 0;
+      bottom: 0;
+      transform: scale(-1, 1); }
+
+.blog {
+  padding-bottom: 50px;
+  background-color: #f2f8f9; }

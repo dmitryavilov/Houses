@@ -86,8 +86,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Портфолио', link: '#block-3'},
                     {text: 'Почему мы', link: '#block-4'},
                     {text: 'Процесс взаимодействия', link: '#block-5'},
-                    {text: 'Компании', link: '#'},
-                    {text: 'Наша Команда', link: '#'},
+                    {text: 'Наша Команда', link: '#block-6'},
                     {text: 'Наши услуги', link: '#'},
                     {text: 'Обратная связь', link: '#'}               
                 ]
@@ -383,6 +382,32 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const blog = {
+        data() {
+            return {
+                blogList: [
+                    {
+                        img: "img/blog/1.webp",
+                        text: "Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров",
+                        link: "#"
+                    },
+                    {
+                        img: "img/blog/2.webp",
+                        text: "Прованс - это спокойный южный регион Франции, с великолепнейшей природой",
+                        link: "#"
+                    }
+                ]
+            }
+        },
+        template: `
+        <div class="blog-block">
+            <div class="blog-block__elem" v-for="item in blogList">
+                <img class="blog-block__img" :src="item.img">
+                <a :href="item.link" class="blog-block__link"><span class="blog-block__text">{{item.text}}</span></a>
+            </div>
+        </div>`
+    }
     //COMPONENTS
     
 
@@ -418,7 +443,8 @@ document.addEventListener('DOMContentLoaded', function(){
             tabulation,
             advantages,
             processList,
-            teamList
+            teamList,
+            blog
         },
         filters: {
             format(value) {

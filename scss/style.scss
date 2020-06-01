@@ -348,6 +348,37 @@ $blue: #19b5fe;
     margin-top: 7px;
   }
 }
+
+.blog-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__elem {
+    display: flex;
+    @include flex-ai-cent-col;
+    text-align: center;
+    flex-basis: 34%;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    text-decoration: none;
+    max-width: 520px;
+    margin-top: 31px;
+  }
+
+  &__text {
+    @include f(Roboto, 18px, $blue, 300, 24px);
+
+    &:hover {
+      border-bottom: 1px solid $blue;
+    }
+  }
+}
+
+
 //COMPONENTS-CLASSES
 
 * {
@@ -903,6 +934,61 @@ $blue: #19b5fe;
 .team {
   padding-bottom: 50px;
 }
+
+.credit-block {
+  display: flex;
+  @include flex-ai-cent-col;
+  text-align: center;
+  position: relative;
+
+  &_top {
+    margin-top: 50px;
+  }
+
+  &__title {
+    @include fw(Roboto, 30px, #464646, 300);
+  }
+
+  &__credit {
+    @include f(Roboto, 18px, #464646, 300, 26px);
+    max-width: 945px;
+    margin-top: 15px;
+  }
+
+  &__name {
+    @include fw(Roboto, 18px, #464646, 700);
+    margin-top: 15px;
+  }
+
+  &__description {
+    @include fw(Roboto, 16px, #464646, 300);
+    margin-top: 10px;
+  }
+
+  &__quotes {
+    background-image: url('../img/team/quotes.png');
+    @include image(47px 37px, center center);
+    width: 47px;
+    height: 37px;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child {
+      right: 0;
+      bottom: 0;
+      transform: scale(-1, 1);
+    }
+  }
+}
 //TEAM
 
+.blog {
+  padding-bottom: 50px;
+  background-color: #f2f8f9;
+}
+//BLOG
 
