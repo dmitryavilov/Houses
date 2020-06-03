@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Процесс взаимодействия', link: '#block-5'},
                     {text: 'Наша Команда', link: '#block-6'},
                     {text: 'Наш блог', link: '#block-7'},
-                    {text: 'Обратная связь', link: '#'}               
+                    {text: 'Обратная связь', link: '#block-8'}               
                 ]
             }        
         },
