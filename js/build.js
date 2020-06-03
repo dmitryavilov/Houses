@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     {text: 'Почему мы', link: '#block-4'},
                     {text: 'Процесс взаимодействия', link: '#block-5'},
                     {text: 'Наша Команда', link: '#block-6'},
-                    {text: 'Наши услуги', link: '#'},
+                    {text: 'Наш блог', link: '#block-7'},
                     {text: 'Обратная связь', link: '#'}               
                 ]
             }        
@@ -408,6 +408,30 @@ document.addEventListener('DOMContentLoaded', function(){
             </div>
         </div>`
     }
+
+    const contactsList = {
+        data() {
+            return {
+                variants: [
+                    {img: "img/contacts/1.png", text: "+ 7 896 876 66 77"},
+                    {img: "img/contacts/2.png", text: "+ 7 896 876 66 77"},
+                    {img: "img/contacts/3.png", text: "sales@23degree.kz"},
+                    {img: "img/contacts/4.png", text: "skype: 23degree"},
+                    {img: "img/contacts/5.png", text: "telegram: 23degree"}
+                ]
+            }
+        },
+        template: `
+        <div class="contacts-variants contacts-variants_left">
+            <div class="contacts-variants__elem" v-for="elem in variants">
+                <div class="contacts-variants__img-wrapper">
+                    <img class="contacts-variants__img" :src="elem.img">
+                </div>
+                <p class="contacts-variants__text">{{elem.text}}</p>
+            </div>
+            <slot></slot>
+        </div>`
+    }
     //COMPONENTS
     
 
@@ -444,7 +468,8 @@ document.addEventListener('DOMContentLoaded', function(){
             advantages,
             processList,
             teamList,
-            blog
+            blog,
+            contactsList
         },
         filters: {
             format(value) {

@@ -227,6 +227,38 @@
     .blog-block__text:hover {
       border-bottom: 1px solid #19b5fe; }
 
+.contacts-variants__img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid white;
+  border-radius: 3px; }
+
+.contacts-variants__elem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px; }
+
+.contacts-variants__description {
+  margin-top: 29px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: white;
+  font-weight: 300; }
+
+.contacts-variants__text {
+  margin-left: 14px;
+  font-family: Roboto;
+  font-size: 18px;
+  color: white;
+  font-weight: 400; }
+
+.contacts-variants_left {
+  margin-left: 30px;
+  margin-top: 3px; }
+
 * {
   box-sizing: border-box; }
 
@@ -718,3 +750,64 @@
 .blog {
   padding-bottom: 50px;
   background-color: #f2f8f9; }
+
+.contacts {
+  background-image: url("../img/contacts/bg.jpg");
+  background-position: center center;
+  background-size: 1920px 530px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 530px; }
+  .contacts-description {
+    font-family: Roboto;
+    font-size: 26px;
+    color: white;
+    font-weight: 300;
+    position: relative;
+    line-height: 25px;
+    text-align: center; }
+  .contacts-wrapper {
+    margin-top: 44px;
+    display: flex; }
+
+.contacts-feedback {
+  width: 750px;
+  height: 260px; }
+  .contacts-feedback__small-field {
+    width: 240px;
+    height: 49px;
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-family: Roboto;
+    font-size: 13px;
+    color: #606060;
+    font-weight: 300; }
+    .contacts-feedback__small-field::placeholder {
+      font-family: Roboto;
+      font-size: 13px;
+      color: #606060;
+      font-weight: 300; }
+    .contacts-feedback__small-field-wrapper {
+      display: flex;
+      justify-content: space-between; }
+  .contacts-feedback__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 17px; }
+  .contacts-feedback__textarea {
+    resize: none;
+    width: 100%;
+    height: 123px;
+    border-radius: 7px;
+    padding-left: 15px;
+    padding-top: 20px;
+    margin-top: 13px; }
+    .contacts-feedback__textarea::placeholder {
+      font-family: Roboto;
+      font-size: 13px;
+      color: #606060;
+      font-weight: 300; }
