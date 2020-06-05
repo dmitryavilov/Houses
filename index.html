@@ -5,15 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#19b5fe">
     <link rel="stylesheet" href="css/libcss/animate.css">
     <link rel="stylesheet" href="css/libcss/reset.css">
-    <link rel="stylesheet" href="css/libcss/swiper.min.css">
-    <link rel="stylesheet" href="css/libcss/motion.min.css">
-    <link rel="stylesheet" href="css/main.css">   
+    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/headerAndMain/logo.png">
+    <title>23 Degree</title>
 </head>
-
 <body>
     <div class="wrapper">
         <main class="main">
@@ -52,7 +51,7 @@
                     <!-- /.header -->
                     <section class="main-information">
                         <div class="main-title-block main-title-block_top">
-                            <h1 class="main-title-block__title">Услуги по 3D моделированию<br>
+                            <h1 class="wow slideInLeft main-title-block__title" data-wow-duration="2s" data-wow-delay="5s">Услуги по 3D моделированию<br>
                             <span class="main-title-block__title-min">полный спектр услуг</span></h1>
                         </div>
                         <!-- /.main-title-block -->
@@ -333,11 +332,10 @@
         <!-- /.main -->
     </div>
     <!-- /.scripts -->
-    <script src="js/libjs/swiper.min.js"></script>
-    <script src="js/libjs/wow.min.js"></script>
-    <script src="js/libjs/vue.js"></script>
-    <script src="js/libjs/vue-scrollto.js"></script>
     <script src="js/index.js"></script> 
+    <script src="js/libjs/wow.min.js"></script>
+    <script src="js/libjs/vue.min.js"></script>
+    <script src="js/libjs/vue-scrollto.js"></script>   
     <script>
         new WOW().init();
     </script>   
